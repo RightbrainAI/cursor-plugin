@@ -1,0 +1,13 @@
+{
+  "name": "rightbrain-tasks",
+  "displayName": "Rightbrain Tasks",
+  "version": "0.1.0",
+  "description": "Manage Rightbrain AI tasks from Cursor — browse, run, create, update, and export the stateless AI functions you embed in your stack via Rightbrain's API.",
+  "author": {
+    "name": "Rightbrain AI",
+    "email": "support@rightbrain.ai"
+  },
+  "license": "MIT",
+  "keywords": ["rightbrain", "ai", "tasks", "automation", "llm", "prompt-engineering"],
+  "logo": "assets/logo.png"
+}
