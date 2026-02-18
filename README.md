@@ -1,34 +1,49 @@
-# Cursor plugin template
+# Rightbrain Tasks — Cursor Plugin
 
-Build and publish Cursor Marketplace plugins from a single repo.
+Manage [Rightbrain](https://rightbrain.ai) AI tasks directly from Cursor.
 
-Two starter plugins are included:
+## What is Rightbrain?
 
-- **starter-simple**: rules and skills only
-- **starter-advanced**: rules, skills, agents, commands, hooks, MCP, and scripts
+Rightbrain lets you embed AI into your existing tech stack via a single API call — no infrastructure to build or maintain. The core unit is a **Task**: a stateless, versioned AI function that takes an input and returns a structured output (JSON, text, images, audio). Tasks are triggered via API, webhook, or scheduled job and return predictable results ready for your UI, database, or downstream workflow.
 
-## Getting started
+Tasks live inside **Projects**, which belong to **Organizations** — giving you multi-team governance, role-based access, version control, and rollback out of the box.
 
-[Use this template](https://github.com/cursor/plugin-template/generate) to create a new repository, then customize:
+## What this plugin does
 
-1. `.cursor-plugin/marketplace.json`: set marketplace `name`, `owner`, and `metadata`.
-2. `plugins/*/.cursor-plugin/plugin.json`: set `name` (lowercase kebab-case), `displayName`, `author`, `description`, `keywords`, `license`, and `version`.
-3. Replace placeholder rules, skills, agents, commands, hooks, scripts, and logos.
+This plugin brings Rightbrain task management into your editor so you can iterate on AI functionality without leaving Cursor:
 
-To add more plugins, see `docs/add-a-plugin.md`.
+- **Browse** tasks across your orgs and projects
+- **Run** tasks with custom inputs and inspect structured outputs
+- **Create** new tasks following best-practice patterns (classification, extraction, generation, image generation)
+- **Update** task configs — prompts, models, output formats, parameters
+- **Export / Import** task definitions as JSON for version control and sharing
 
-## Single plugin vs multi-plugin
+## Installation
 
-This template defaults to **multi-plugin** (multiple plugins in one repo).
+Install from the Cursor Marketplace, or clone this repo and point Cursor at the local directory.
 
-For a **single plugin**, move your plugin folder contents to the repository root, keep one `.cursor-plugin/plugin.json`, and remove `.cursor-plugin/marketplace.json`.
+## Usage
 
-## Submission checklist
+Invoke the skill in Cursor's agent chat with phrases like:
 
-- Each plugin has a valid `.cursor-plugin/plugin.json`.
-- Plugin names are unique, lowercase, and kebab-case.
-- `.cursor-plugin/marketplace.json` entries map to real plugin folders.
-- All frontmatter metadata is present in rule, skill, agent, and command files.
-- Logos are committed and referenced with relative paths.
-- `node scripts/validate-template.mjs` passes.
-- Repository link is ready for submission to the Cursor team (Slack or `kniparko@anysphere.com`).
+- "rightbrain tasks"
+- "create task"
+- "browse tasks"
+- "run task"
+
+The skill walks you through authentication (via `npx rightbrain@latest login`), org/project selection, and the desired operation.
+
+## Requirements
+
+- Node.js >= 18
+- A [Rightbrain](https://rightbrain.ai) account
+
+## Links
+
+- [Rightbrain Platform](https://rightbrain.ai)
+- [Rightbrain Documentation](https://docs.rightbrain.ai)
+- [Source Skills Repo](https://github.com/RightbrainAI/claude-code-skills)
+
+## License
+
+MIT
